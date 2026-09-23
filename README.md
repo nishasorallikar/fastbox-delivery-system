@@ -4,7 +4,7 @@
 
 ---
 
-![Cover](FastBox Delivery System/FastBox Delivery System.png)
+![Cover](FastBox%20Delivery%20System/FastBox%20Delivery%20System.png)
 
 ---
 
@@ -22,11 +22,11 @@ The assignment gives us a JSON input file with **3 entities**:
 
 `Assign Packages` → `Simulate Deliveries` → `Calculate Distances` → `Generate Report`
 
-![Problem Overview](FastBox Delivery System/Problem Overview.png)
+![Problem Overview](FastBox%20Delivery%20System/Problem%20Overview.png)
 
 ---
 
-## 🗂️ Input Format — JSON
+## 🗂️ Input%20Format%20%E2%80%94%20JSON
 
 The input file has three top-level keys. The code supports **both** dict format (test cases) and list format (base_case):
 
@@ -46,7 +46,7 @@ The input file has three top-level keys. The code supports **both** dict format 
 | `agents` | Delivery workers | `{ id: [x, y] }` |
 | `packages` | Items to deliver | `{ warehouse, destination }` |
 
-![Input Format](FastBox Delivery System/Input Format — JSON.png)
+![Input Format](FastBox%20Delivery%20System/Input%20Format%20%E2%80%94%20JSON.png)
 
 ---
 
@@ -63,7 +63,7 @@ Six sequential steps form the full pipeline:
 | 05 | **REPORT** | Aggregate stats, find best agent |
 | 06 | **SAVE** | Write `report.json` to disk |
 
-![Core Algorithm Flow](FastBox Delivery System/Core Algorithm Flow.png)
+![Core Algorithm Flow](FastBox%20Delivery%20System/Core%20Algorithm%20Flow.png)
 
 ---
 
@@ -88,7 +88,7 @@ def euclidean_distance(point_a, point_b):
 >
 > Two points (P₁, P₂) on a 2D grid are connected by the straight-line distance `d`.
 
-![Euclidean Distance](FastBox Delivery System/Euclidean Distance.png)
+![Euclidean Distance](FastBox%20Delivery%20System/Euclidean%20Distance.png)
 
 ---
 
@@ -112,7 +112,7 @@ A3  →  W5  =  9.0   (not nearest)
 A4  →  W5  =  4.7   ← NEAREST → Package assigned to A4
 ```
 
-![Assigning Packages](FastBox Delivery System/Assigning Packages.png)
+![Assigning Packages](FastBox%20Delivery%20System/Assigning%20Packages.png)
 
 > **Note:** Agent positions used here are their **starting locations**. Positions only update *during* simulation.
 
@@ -140,7 +140,7 @@ efficiency       = total_distance / packages_delivered # lower = better
 
 > **Agent position updates after each delivery** — the next package's leg1 starts from the previous destination.
 
-![Simulating the Journey](FastBox Delivery System/Simulating the Journey.png)
+![Simulating the Journey](FastBox%20Delivery%20System/Simulating%20the%20Journey.png)
 
 ---
 
@@ -169,7 +169,7 @@ The output JSON contains stats for every agent plus `best_agent`:
 **Best Agent** = agent with the **lowest efficiency score**
 (least average distance per package delivered)
 
-![Generated Report](FastBox Delivery System/Generated Report.png)
+![Generated Report](FastBox%20Delivery%20System/Generated%20Report.png)
 
 ---
 
@@ -184,7 +184,7 @@ All 4 bonus features are built into `delivery_system.py` and activated by defaul
 | 03 | **New Agent Mid-Day** | `A_NEW` joins at warehouse centroid after 50% of packages |
 | 04 | **CSV Export** | Top performer saved to `report_top_performer.csv` |
 
-![Bonus Features](FastBox Delivery System/Bonus Features.png)
+![Bonus Features](FastBox%20Delivery%20System/Bonus%20Features.png)
 
 ---
 
@@ -207,7 +207,7 @@ Prints a normalised 30×30 grid to the terminal after assignment:
 > All real coordinates are normalised to the grid.
 > Y-axis is **inverted** so the map reads correctly top-to-bottom.
 
-![ASCII Route Map](FastBox Delivery System/ASCII Route Map.png)
+![ASCII Route Map](FastBox%20Delivery%20System/ASCII%20Route%20Map.png)
 
 ---
 
@@ -234,7 +234,7 @@ The system was validated against all provided test cases:
 assert total_delivered == len(packages)   # Zero packages lost.
 ```
 
-![Test Results](FastBox Delivery System/Test Results.png)
+![Test Results](FastBox%20Delivery%20System/Test%20Results.png)
 
 ---
 
@@ -257,7 +257,7 @@ py delivery_system.py
 py delivery_system.py "test_case_1.json" my_report.json
 ```
 
-![Summary](FastBox Delivery System/Summary.png)
+![Summary](FastBox%20Delivery%20System/Summary.png)
 
 ---
 
